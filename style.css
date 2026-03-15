@@ -33,11 +33,35 @@ body {
   text-align: center;
   padding: 0.5rem 0 0.2rem;
 }
+.header-image-wrap {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
 .header-image {
   max-width: min(90vw, 420px);
   height: auto;
   display: block;
   margin: 0 auto 0.3rem;
+  transition: transform 0.15s ease;
+}
+.header-image-wrap:active .header-image,
+.header-image.pressed {
+  transform: scale(0.92);
+}
+
+/* Flying hearts */
+.flying-heart {
+  position: absolute;
+  font-size: 1.4rem;
+  pointer-events: none;
+  z-index: 10;
+  animation: flyHeart var(--fly-duration, 1s) ease-out forwards;
+}
+@keyframes flyHeart {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--fly-x, 50px), var(--fly-y, -120px)) scale(0.5) rotate(var(--fly-rot, 30deg)); }
 }
 
 .home-header h1 {

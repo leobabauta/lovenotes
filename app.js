@@ -291,6 +291,40 @@
 
   init();
 
+  // --- Header heart click: press + flying hearts ---
+  document.querySelectorAll('.header-image-wrap').forEach(wrap => {
+    wrap.addEventListener('click', (e) => {
+      const img = wrap.querySelector('.header-image');
+      img.classList.add('pressed');
+      setTimeout(() => img.classList.remove('pressed'), 200);
+
+      const rect = wrap.getBoundingClientRect();
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const hearts = ['\u2764', '\u1F497', '\u2665', '\u1F496', '\u2763'];
+
+      for (let i = 0; i < 12; i++) {
+        const el = document.createElement('span');
+        el.className = 'flying-heart';
+        el.textContent = hearts[i % hearts.length];
+        const angle = (Math.PI * 2 * i) / 12 + (Math.random() - 0.5) * 0.5;
+        const dist = 80 + Math.random() * 80;
+        const flyX = Math.cos(angle) * dist;
+        const flyY = Math.sin(angle) * dist - 40;
+        const rot = (Math.random() - 0.5) * 60;
+        const dur = 0.7 + Math.random() * 0.5;
+        el.style.cssText = `
+          left: ${cx}px; top: ${cy}px;
+          --fly-x: ${flyX}px; --fly-y: ${flyY}px;
+          --fly-rot: ${rot}deg; --fly-duration: ${dur}s;
+          font-size: ${1 + Math.random() * 1}rem;
+        `;
+        wrap.appendChild(el);
+        setTimeout(() => el.remove(), dur * 1000 + 50);
+      }
+    });
+  });
+
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
