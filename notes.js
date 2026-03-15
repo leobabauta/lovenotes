@@ -1,83 +1,8 @@
 // Each note: { id, from, body, photos }
 // photos: array of { src, caption } — 4 photos per note (2 left, 2 right)
-// Replace the src paths with actual photo filenames in the photos/ folder.
 const NOTES = [
   {
     id: 1,
-    from: "From Mom & Dad",
-    photos: [
-      { src: "photos/dad1.jpg", caption: "" },
-      { src: "photos/dad2.JPG", caption: "" },
-      { src: "photos/dad3.jpg", caption: "" },
-      { src: "photos/dad4.JPG", caption: "" }
-    ],
-    body: `Dear Coco,
-
-From the moment you arrived in this world, you filled our lives with a light we never knew was missing. Watching you grow into the incredible person you are today has been the greatest joy of our lives.
-
-You are kind, brave, funny, and so deeply loved. Never forget that — no matter where life takes you, we are always cheering you on.
-
-Happy birthday, sweet girl. We love you more than words could ever say.
-
-With all our love,
-Mom & Dad`
-  },
-  {
-    id: 2,
-    from: "From Your Little Brother",
-    photos: [
-      { src: "photos/bro1.jpg", caption: "" },
-      { src: "photos/bro2.jpg", caption: "" },
-      { src: "photos/bro3.jpg", caption: "" },
-      { src: "photos/bro4.jpg", caption: "" }
-    ],
-    body: `Hey Coco,
-
-I know I don't say it enough, but you're the best big sister anyone could ask for. You always looked out for me, even when I was being annoying (which was probably a lot).
-
-You taught me what it means to be brave and to stand up for what matters. I'm so proud to be your brother.
-
-Love you always,
-Your Little Bro`
-  },
-  {
-    id: 3,
-    from: "From Grandma",
-    photos: [
-      { src: "photos/grandma1.jpg", caption: "" },
-      { src: "photos/grandma2.jpg", caption: "" },
-      { src: "photos/grandma3.jpg", caption: "" },
-      { src: "photos/grandma4.jpg", caption: "" }
-    ],
-    body: `My dearest Chloe,
-
-Every time I see your smile, I see the little girl who used to sit on my lap and ask me to tell her "just one more story." You still have that same sparkle in your eyes.
-
-You carry so much love in your heart, and the world is better because you're in it. I thank God for you every single day.
-
-All my love and kisses,
-Grandma`
-  },
-  {
-    id: 4,
-    from: "From Your Big Sister",
-    photos: [
-      { src: "photos/sis1.jpg", caption: "" },
-      { src: "photos/sis2.jpg", caption: "" },
-      { src: "photos/sis3.jpg", caption: "" },
-      { src: "photos/sis4.jpg", caption: "" }
-    ],
-    body: `Coco!
-
-Where do I even start? You're my best friend, my partner in crime, and the person who always makes me laugh the hardest.
-
-Remember all those late nights talking about everything and nothing? Those are some of my favorite memories. I'm so lucky to have you as my sister.
-
-Love you to the moon and back,
-Your Big Sis`
-  },
-  {
-    id: 5,
     from: "From Auntie An An",
     photos: [
       { src: "photos/ana1.jpg", caption: "" },
@@ -101,7 +26,7 @@ Love,
 Auntie An An`
   },
   {
-    id: 6,
+    id: 2,
     from: "From Maia",
     photos: [
       { src: "photos/maia1.jpg", caption: "" },
@@ -120,7 +45,7 @@ Love you forever and ever!!
 -Maia`
   },
   {
-    id: 7,
+    id: 3,
     from: "From Noelle",
     photos: [
       { src: "photos/noelle1.JPG", caption: "" },
@@ -137,7 +62,7 @@ I remember when the family was living in San Francisco and you gave me a hello k
 I love you so much, happy birthday to my big sister \u2764\uFE0F`
   },
   {
-    id: 8,
+    id: 4,
     from: "From Rain",
     photos: [
       { src: "photos/rain1.jpg", caption: "" },
@@ -150,7 +75,7 @@ I love you so much, happy birthday to my big sister \u2764\uFE0F`
 I love that our minds work in such strange yet similar ways. It makes me feel like no matter how weird or confusing of a thought or idea I have I can at least talk to you about it and you'll understand. For example: meow meow meow meow meow. You get it right?`
   },
   {
-    id: 9,
+    id: 5,
     from: "From Isaiah",
     photos: [
       { src: "photos/isaiah1.jpg", caption: "" },
@@ -164,25 +89,5 @@ I have learned so much from you. In a lot of ways I can claim success largely fr
 
 Thank you for everything.
 Love, Isaiah`
-  },
-  {
-    id: 10,
-    from: "From the Whole Family",
-    photos: [
-      { src: "photos/family1.jpg", caption: "" },
-      { src: "photos/family2.jpg", caption: "" },
-      { src: "photos/family3.jpg", caption: "" },
-      { src: "photos/family4.jpg", caption: "" }
-    ],
-    body: `Dear Coco,
-
-This is a love note from ALL of us — every single person in this family adores you.
-
-You bring people together. You make the holidays brighter, the dinners louder (in the best way), and the hard times easier just by being there.
-
-33 looks amazing on you. Here's to many, many more years of love, laughter, and being unapologetically YOU.
-
-With all the love in our hearts,
-Your Family`
   }
 ];
