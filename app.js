@@ -302,14 +302,15 @@
       const rect = wrap.getBoundingClientRect();
       const cx = rect.width / 2;
       const cy = rect.height / 2;
-      const hearts = ['\u2764', '\u1F497', '\u2665', '\u1F496', '\u2763'];
+      const hearts = ['\u2764', '\u2665', '\u2763'];
+      const colors = ['#c2185b', '#e8476c', '#b53a5a', '#e57397', '#d4456a', '#f06292'];
 
       for (let i = 0; i < 12; i++) {
         const el = document.createElement('span');
         el.className = 'flying-heart';
         el.textContent = hearts[i % hearts.length];
         const angle = (Math.PI * 2 * i) / 12 + (Math.random() - 0.5) * 0.5;
-        const dist = 80 + Math.random() * 80;
+        const dist = 240 + Math.random() * 240;
         const flyX = Math.cos(angle) * dist;
         const flyY = Math.sin(angle) * dist - 40;
         const rot = (Math.random() - 0.5) * 60;
@@ -318,7 +319,8 @@
           left: ${cx}px; top: ${cy}px;
           --fly-x: ${flyX}px; --fly-y: ${flyY}px;
           --fly-rot: ${rot}deg; --fly-duration: ${dur}s;
-          font-size: ${1 + Math.random() * 1}rem;
+          --heart-clr: ${colors[i % colors.length]};
+          font-size: ${1.2 + Math.random() * 1.2}rem;
         `;
         wrap.appendChild(el);
         setTimeout(() => el.remove(), dur * 1000 + 50);

@@ -54,9 +54,9 @@ body {
 /* Flying hearts */
 .flying-heart {
   position: absolute;
-  font-size: 1.4rem;
   pointer-events: none;
   z-index: 10;
+  color: var(--heart-clr, #c2185b);
   animation: flyHeart var(--fly-duration, 1s) ease-out forwards;
 }
 @keyframes flyHeart {
