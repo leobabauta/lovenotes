@@ -106,5 +106,16 @@ I can't tell you enough how proud I am of you, of your huge heart, of your coura
 But I also want to say how much I love hanging with you — you're so fun, funny, and loving. I think of you dancing and rapping to Doja Cat, or making fun of Nate, or joking around with your siblings. I can't tell you how meaningful it's been to be your dad all these years, and how much you changed me, coming into my life.
 
 I love you - Dad`
+  },
+  {
+    id: 7,
+    from: "From Nate",
+    photos: [
+      { src: "photos/nate1.jpg", caption: "" },
+      { src: "photos/nate2.jpg", caption: "" },
+      { src: "photos/nate3.png", caption: "" },
+      { src: "photos/nate4.jpg", caption: "" }
+    ],
+    body: `Happy birthday to my favorite person in the world! You have filled my life with love and joy ever since we met in college. I cherish all of our memories together\u2014from you interrupting me in our English final in front of the whole class, to living together in Guam, and to having our own home with two awesome cats. I can\u2019t think of anyone else I\u2019d rather spend the rest of my life with and I can\u2019t wait to see what other memories we make. Happy birthday and I love you!!`
   }
 ];
