@@ -298,6 +298,7 @@
       const img = wrap.querySelector('.header-image');
       img.classList.add('pressed');
       setTimeout(() => img.classList.remove('pressed'), 200);
+      showRandomFact(funFactHome);
 
       const rect = wrap.getBoundingClientRect();
       const cx = rect.width / 2;
