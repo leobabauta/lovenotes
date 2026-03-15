@@ -89,7 +89,7 @@ body {
 .hearts-pile {
   position: relative;
   width: 340px;
-  height: 360px;
+  height: 300px;
   margin: 0 auto;
   cursor: pointer;
 }

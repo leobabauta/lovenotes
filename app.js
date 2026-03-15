@@ -44,10 +44,8 @@
   const backBtn      = document.getElementById('back-home');
   const resetBtn     = document.getElementById('reset-btn');
   const funFactHome  = document.getElementById('fun-fact-home');
-  const funFactComplete = document.getElementById('fun-fact-complete');
 
   funFactHome.addEventListener('click', () => showRandomFact(funFactHome));
-  funFactComplete.addEventListener('click', () => showRandomFact(funFactComplete));
   const photosLeft   = document.getElementById('photos-left');
   const photosRight  = document.getElementById('photos-right');
 
@@ -78,7 +76,6 @@
     view.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (view === homeView) showRandomFact(funFactHome);
-    if (view === completeView) showRandomFact(funFactComplete);
   }
 
   function buildQueue() {
