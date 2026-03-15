@@ -89,5 +89,22 @@ I have learned so much from you. In a lot of ways I can claim success largely fr
 
 Thank you for everything.
 Love, Isaiah`
+  },
+  {
+    id: 6,
+    from: "From Dad",
+    photos: [
+      { src: "photos/dad1.jpg", caption: "" },
+      { src: "photos/dad2.JPG", caption: "" },
+      { src: "photos/dad3.jpg", caption: "" },
+      { src: "photos/dad4.JPG", caption: "" }
+    ],
+    body: `My love,
+
+I can't tell you enough how proud I am of you, of your huge heart, of your courage and beauty and sweetness and insight and wisdom and resilience. Of what a great friend and sister and daughter and creator you are. Of how much you've honored yourself and your journey.
+
+But I also want to say how much I love hanging with you — you're so fun, funny, and loving. I think of you dancing and rapping to Doja Cat, or making fun of Nate, or joking around with your siblings. I can't tell you how meaningful it's been to be your dad all these years, and how much you changed me, coming into my life.
+
+I love you - Dad`
   }
 ];
