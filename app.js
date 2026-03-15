@@ -14,7 +14,8 @@
     "Chloe\u2019s handle @ate.chloe comes from \u201Cate\u201D (pronounced ah-teh), the Filipino term of respect for an older sister \u2014 a sweet nod to her identity and her role in the family.",
     "Chloe was born on a Monday, is of the Millennial generation, and her star sign is Pisces (Chinese zodiac: Rooster).",
     "Chloe shares a birthday with will.i.am and Eva Longoria.",
-    "Top 4 songs on March 15, 1993: Snow \u2013 Informer, Dr. Dre \u2013 Nuthin\u2019 But A G Thang, Silk \u2013 Freak Me, Peabo Bryson & Regina Bell \u2013 A Whole New World."
+    "Top 4 songs on March 15, 1993: Snow \u2013 Informer, Dr. Dre \u2013 Nuthin\u2019 But A G Thang, Silk \u2013 Freak Me, Peabo Bryson & Regina Bell \u2013 A Whole New World.",
+    "Two of her favorite beings in the world are Kira and Kobe, her cat babies."
   ];
 
   function showRandomFact(el) {

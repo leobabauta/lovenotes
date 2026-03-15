@@ -138,6 +138,35 @@ I love you so much, happy birthday to my big sister \u2764\uFE0F`
   },
   {
     id: 8,
+    from: "From Rain",
+    photos: [
+      { src: "photos/rain1.jpg", caption: "" },
+      { src: "photos/rain2.JPG", caption: "" },
+      { src: "photos/rain3.png", caption: "" },
+      { src: "photos/rain4.png", caption: "" }
+    ],
+    body: `I keep thinking about how we both cherish our cats in the same way. When you last visited and we talked about time traveling to our future selves and appreciating the moment for them, I felt like it was such a strange and hard to explain concept but you do the exact same thing. I don't remember ever talking about that with you or anyone before but we still somehow started doing it on our own, separately.
+
+I love that our minds work in such strange yet similar ways. It makes me feel like no matter how weird or confusing of a thought or idea I have I can at least talk to you about it and you'll understand. For example: meow meow meow meow meow. You get it right?`
+  },
+  {
+    id: 9,
+    from: "From Isaiah",
+    photos: [
+      { src: "photos/isaiah1.jpg", caption: "" },
+      { src: "photos/isaiah2.JPG", caption: "" },
+      { src: "photos/isaiah3.jpg", caption: "" },
+      { src: "photos/isaiah4.jpg", caption: "" }
+    ],
+    body: `Dear Coco,
+
+I have learned so much from you. In a lot of ways I can claim success largely from the advice and support you've given me. You were always able to look at my struggle and show me how to get back up. You have taught me to be more thoughtful, to be more empathetic, and (perhaps most importantly) to be gentler with myself. I always know I'll have shelter with you, my oldest sister.
+
+Thank you for everything.
+Love, Isaiah`
+  },
+  {
+    id: 10,
     from: "From the Whole Family",
     photos: [
       { src: "photos/family1.jpg", caption: "" },
