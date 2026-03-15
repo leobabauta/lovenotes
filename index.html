@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Notes to Coco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:ital,wght@0,300;0,400;1,300&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SVG heart clip path — fatter/wider heart -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">
+        <path d="M0.5,0.22 C0.5,0.09 0.38,0 0.25,0 C0.08,0 0,0.13 0,0.32 C0,0.58 0.5,1 0.5,1 C0.5,1 1,0.58 1,0.32 C1,0.13 0.92,0 0.75,0 C0.62,0 0.5,0.09 0.5,0.22 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <div id="app">
+    <!-- Home view: pile of hearts -->
+    <div id="home-view" class="view active">
+      <header class="home-header">
+        <img src="lovenotescoco.png" alt="Love Notes to Coco" class="header-image">
+        <p class="subtitle">With all our love</p>
+      </header>
+      <p class="tap-hint">Tap the pile to read a love note</p>
+      <div id="hearts-pile" class="hearts-pile"></div>
+      <div id="fun-fact-home" class="fun-fact"></div>
+    </div>
+
+    <!-- Single note view -->
+    <div id="note-view" class="view">
+      <button id="back-home" class="back-btn">&larr; All Notes</button>
+      <h2 id="note-from" class="note-from"></h2>
+      <div class="note-layout">
+        <div id="photos-left" class="photo-column"></div>
+        <div class="note-stage">
+          <div id="heart-note" class="heart-note">
+            <div class="heart-note-inner">
+              <div id="note-body" class="note-body"></div>
+            </div>
+          </div>
+        </div>
+        <div id="photos-right" class="photo-column"></div>
+      </div>
+      <div class="note-nav">
+        <button id="prev-note" class="nav-arrow" aria-label="Previous note">&larr;</button>
+        <span id="note-counter" class="note-counter"></span>
+        <button id="next-note" class="nav-arrow" aria-label="Next note">&rarr;</button>
+      </div>
+    </div>
+
+    <!-- All-read view: same title, spread hearts with names -->
+    <div id="complete-view" class="view">
+      <header class="home-header">
+        <img src="lovenotescoco.png" alt="Love Notes to Coco" class="header-image">
+        <p class="subtitle">With all our love</p>
+      </header>
+      <p class="tap-hint">Tap any heart to re-read</p>
+      <div id="complete-grid" class="hearts-spread"></div>
+      <div id="fun-fact-complete" class="fun-fact"></div>
+      <div class="reset-wrap">
+        <button id="reset-btn" class="reset-btn">Start Fresh &hearts;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="notes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

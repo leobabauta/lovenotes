@@ -1,0 +1,392 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', 'Georgia', serif;
+  background: #8c6560;
+  color: #4a3728;
+  min-height: 100vh;
+}
+
+/* ---------- Views ---------- */
+.view {
+  display: none;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+}
+.view.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---------- Home header ---------- */
+.home-header {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+}
+.header-image {
+  max-width: min(90vw, 420px);
+  height: auto;
+  display: block;
+  margin: 0 auto 0.3rem;
+}
+
+.home-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  color: #c2185b;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+.subtitle {
+  font-family: 'Dancing Script', cursive;
+  color: #e57397;
+  font-size: 2.8rem;
+}
+.tap-hint {
+  text-align: center;
+  color: #8a6a60;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0.6rem 0 1.2rem;
+}
+
+.fun-fact {
+  text-align: center;
+  max-width: 500px;
+  margin: 1.5rem auto;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+.fun-fact::before {
+  content: 'Did you know? ';
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ==========================================
+   HEARTS PILE  — one big overlapping pile
+   ========================================== */
+.hearts-pile {
+  position: relative;
+  width: 340px;
+  height: 360px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.pile-heart {
+  position: absolute;
+  width: 200px;
+  height: 170px;
+  clip-path: url(#heart-clip);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+/* Wiggle ALL hearts when hovering the pile */
+@keyframes wiggle1 { 0%,100% { transform: var(--base-rot); } 50% { transform: var(--base-rot) translate(6px, -4px) rotate(5deg); } }
+@keyframes wiggle2 { 0%,100% { transform: var(--base-rot); } 50% { transform: var(--base-rot) translate(-5px, 5px) rotate(-4deg); } }
+@keyframes wiggle3 { 0%,100% { transform: var(--base-rot); } 50% { transform: var(--base-rot) translate(4px, 6px) rotate(3deg); } }
+@keyframes wiggle4 { 0%,100% { transform: var(--base-rot); } 50% { transform: var(--base-rot) translate(-6px, -3px) rotate(-5deg); } }
+
+.hearts-pile:hover .pile-heart:nth-child(7n+1) { animation: wiggle1 0.6s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n+2) { animation: wiggle2 0.7s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n+3) { animation: wiggle3 0.55s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n+4) { animation: wiggle4 0.65s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n+5) { animation: wiggle1 0.75s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n+6) { animation: wiggle3 0.5s ease-in-out infinite; }
+.hearts-pile:hover .pile-heart:nth-child(7n)   { animation: wiggle2 0.6s ease-in-out infinite; }
+
+/* ==========================================
+   SPREAD HEARTS  — complete view, named
+   ========================================== */
+.hearts-spread {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.spread-heart {
+  width: 160px;
+  height: 136px;
+  clip-path: url(#heart-clip);
+  cursor: pointer;
+  transition: transform 0.25s, filter 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.spread-heart:hover {
+  transform: scale(1.12);
+  filter: brightness(1.1);
+}
+.spread-heart .heart-label {
+  font-family: 'Dancing Script', cursive;
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  text-align: center;
+  pointer-events: none;
+  padding-top: 18%;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   SINGLE HEART NOTE  — reading view
+   ========================================== */
+
+/* "From" name above the heart */
+.note-from {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  color: #fff;
+  text-align: center;
+  margin: 0.5rem 0 0.8rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* Layout: photos overlapping heart */
+.note-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+.photo-column:first-child {
+  margin-right: -60px;
+}
+.photo-column:last-child {
+  margin-left: -60px;
+}
+
+.photo-frame {
+  width: 210px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.15);
+  transform: rotate(var(--photo-rot, -2deg));
+}
+.photo-frame img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.photo-frame .photo-caption {
+  font-size: 0.7rem;
+  color: #8a6a60;
+  text-align: center;
+  padding-top: 5px;
+  font-style: italic;
+}
+
+.note-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  overflow: visible;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.heart-note {
+  width: min(98vw, 1030px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Heart shape as background decoration */
+.heart-note::before {
+  content: '';
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.15 / 1;
+  clip-path: url(#heart-clip);
+  background: var(--heart-color, #b53a5a);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heart-note-inner {
+  width: 62%;
+  text-align: center;
+  padding-top: min(22vw, 220px);
+  padding-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.note-body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  color: #fff;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ---- Heart bounce animations ---- */
+@keyframes shrinkAndBounceOff {
+  0%   { transform: scale(1); opacity: 1; }
+  30%  { transform: scale(0.15); opacity: 1; }
+  45%  { transform: scale(0.15) translateX(12vw); opacity: 1; }
+  55%  { transform: scale(0.15) translateX(-8vw); opacity: 1; }
+  100% { transform: scale(0.15) translateX(-130vw); opacity: 0; }
+}
+@keyframes bounceInAndExpand {
+  0%   { transform: scale(0.15) translateX(130vw); opacity: 0; }
+  35%  { transform: scale(0.15) translateX(-6vw); opacity: 1; }
+  50%  { transform: scale(0.15) translateX(4vw); opacity: 1; }
+  65%  { transform: scale(0.15) translateX(0); opacity: 1; }
+  100% { transform: scale(1) translateX(0); opacity: 1; }
+}
+@keyframes expandBounce {
+  0%   { transform: scale(0.15); opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  80%  { transform: scale(0.97); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.heart-shrink-off {
+  animation: shrinkAndBounceOff 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.heart-hop-in {
+  animation: bounceInAndExpand 0.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.heart-expand-in {
+  animation: expandBounce 0.55s ease-out forwards;
+}
+
+/* Hide text during shrink */
+.heart-shrink-off .heart-note-inner {
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+/* ---------- Navigation ---------- */
+.back-btn {
+  background: none;
+  border: none;
+  font-family: 'Raleway', Georgia, serif;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  display: block;
+  margin: 0 auto;
+}
+.back-btn:hover { text-decoration: underline; }
+
+.note-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+}
+.nav-arrow {
+  background: #9e2a4a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-arrow:hover { background: #7d1f3b; transform: scale(1.1); }
+.nav-arrow:disabled { background: #997; cursor: default; transform: none; }
+
+.note-counter {
+  font-size: 0.9rem;
+  color: #fff;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* ---------- Complete / reset ---------- */
+.reset-wrap {
+  text-align: center;
+  padding: 1.5rem 0 3rem;
+}
+.reset-btn {
+  background: #9e2a4a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-family: 'Raleway', Georgia, serif;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.reset-btn:hover { background: #7d1f3b; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .photo-column:first-child { margin-right: -40px; }
+  .photo-column:last-child { margin-left: -40px; }
+  .photo-frame { width: 170px; }
+  .photo-frame img { height: 145px; }
+}
+@media (max-width: 900px) {
+  .note-layout { flex-direction: column; align-items: center; }
+  .photo-column { flex-direction: row; gap: 0.8rem; margin: 0 !important; }
+  .photo-frame { width: 160px; }
+  .photo-frame img { height: 135px; }
+}
+@media (max-width: 500px) {
+  .hearts-pile { width: 280px; height: 320px; }
+  .pile-heart { width: 160px; height: 136px; }
+  .spread-heart { width: 130px; height: 110px; }
+  .spread-heart .heart-label { font-size: 0.85rem; }
+  .heart-note { width: 100vw; }
+  .heart-note-inner { width: 70%; padding-top: 28vw; }
+  .photo-frame { width: 130px; }
+  .photo-frame img { height: 110px; }
+}
