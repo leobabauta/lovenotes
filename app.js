@@ -18,7 +18,8 @@
     "Two of her favorite beings in the world are Kira and Kobe, her cat babies.",
     "Chloe once convinced her sister Maia, as a prank, that Chloe had a twin sister.",
     "Chloe was once the cutest ballerina at BodyArts school in Guam.",
-    "Chloe is a talented art journaler and loves to create art. She's also been journaling since she was a kid."
+    "Chloe is a talented art journaler and loves to create art. She's also been journaling since she was a kid.",
+    "Chloe's family nickname is \"Coco\" ... and the Pixar film Coco was named after her, probably."
   ];
 
   function showRandomFact(el) {
