@@ -117,5 +117,20 @@ I love you - Dad`
       { src: "photos/nate4.jpg", caption: "" }
     ],
     body: `Happy birthday to my favorite person in the world! You have filled my life with love and joy ever since we met in college. I cherish all of our memories together\u2014from you interrupting me in our English final in front of the whole class, to living together in Guam, and to having our own home with two awesome cats. I can\u2019t think of anyone else I\u2019d rather spend the rest of my life with and I can\u2019t wait to see what other memories we make. Happy birthday and I love you!!`
+  },
+  {
+    id: 8,
+    from: "From Justin",
+    photos: [
+      { src: "photos/justin1.jpg", caption: "" },
+      { src: "photos/jusstin2.JPG", caption: "" },
+      { src: "photos/justin3.jpg", caption: "" },
+      { src: "photos/justin4.jpg", caption: "" }
+    ],
+    body: `Happy Birthday Chloe!!!
+
+World's #1 older sister! I was just looking at old pictures of the six of us and it's so crazy that we were ever that cute. We're always missing you whenever we're together - it never feels quite like we're a complete set without you there. It's so cool to have a cool, chic, artistic, but also relatable older sister that is always in your corner, and it's so meaningful that we can always feel that support because of how you treat us and talk to us. I personally feel so lucky to have you as an example and role model. I'm sure it can be exhausting at times, but you've always killed it. I don't say it enough (or ever), but you're truly an inspiration. Not to mention you give great advice, which I appreciate more and more as I get older myself. I hope 33 is good to you, because you deserve it as much as anyone I know. Love you!
+
+- Justin`
   }
 ];
