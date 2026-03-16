@@ -164,7 +164,9 @@
 
   function populateNote(note) {
     const noteIndex = NOTES.findIndex(n => n.id === note.id);
-    heartNote.style.setProperty('--heart-color', pickColor(noteIndex));
+    const color = pickColor(noteIndex);
+    heartNote.style.setProperty('--heart-color', color);
+    noteView.style.setProperty('--heart-color', color);
     noteFrom.textContent = note.from;
     noteBody.textContent = note.body;
     renderPhotos(note);
