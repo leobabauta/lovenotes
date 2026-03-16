@@ -80,8 +80,7 @@
   }
 
   function buildQueue() {
-    const unread = NOTES.filter(n => !readIds.includes(n.id)).map(n => n.id);
-    queue = shuffle(unread);
+    queue = NOTES.map(n => n.id);
     currentIndex = 0;
   }
 
@@ -136,7 +135,6 @@
 
   heartsPile.addEventListener('click', () => {
     if (!queue.length) buildQueue();
-    currentIndex = 0;
     showNote(queue[currentIndex]);
   });
 
@@ -227,7 +225,7 @@
   function updateNav() {
     noteCounter.textContent = `${currentIndex + 1} / ${queue.length}`;
     prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = false;
+    nextBtn.disabled = currentIndex >= queue.length - 1;
   }
 
   function goNext() {
@@ -236,13 +234,8 @@
       currentIndex++;
       transitionToNote(queue[currentIndex]);
     } else {
-      if (readIds.length >= NOTES.length) {
-        renderSpread();
-        switchView(completeView);
-      } else {
-        buildQueue();
-        transitionToNote(queue[currentIndex]);
-      }
+      renderSpread();
+      switchView(completeView);
     }
   }
 
@@ -264,13 +257,8 @@
   });
 
   backBtn.addEventListener('click', () => {
-    if (readIds.length >= NOTES.length) {
-      renderSpread();
-      switchView(completeView);
-    } else {
-      renderPile();
-      switchView(homeView);
-    }
+    renderPile();
+    switchView(homeView);
   });
 
   resetBtn.addEventListener('click', () => {
@@ -282,14 +270,9 @@
   });
 
   function init() {
-    if (readIds.length >= NOTES.length) {
-      renderSpread();
-      switchView(completeView);
-    } else {
-      buildQueue();
-      renderPile();
-      switchView(homeView);
-    }
+    buildQueue();
+    renderPile();
+    switchView(homeView);
   }
 
   init();
