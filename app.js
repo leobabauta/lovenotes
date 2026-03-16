@@ -225,7 +225,7 @@
   function updateNav() {
     noteCounter.textContent = `${currentIndex + 1} / ${queue.length}`;
     prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = currentIndex >= queue.length - 1;
+    nextBtn.disabled = false;
   }
 
   function goNext() {
