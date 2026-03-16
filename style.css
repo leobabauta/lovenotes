@@ -17,9 +17,6 @@ body {
   min-height: 100vh;
   padding: 1.5rem 1rem;
 }
-#note-view {
-  background: var(--heart-color, #b53a5a);
-}
 .view.active {
   display: block;
   animation: fadeIn 0.4s ease;
@@ -281,6 +278,7 @@ body {
   padding-bottom: 2.5rem;
   position: relative;
   z-index: 1;
+  min-height: calc(min(98vw, 1030px) / 1.15);
 }
 
 .note-body {
