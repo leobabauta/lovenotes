@@ -348,8 +348,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 1rem 0 2rem;
-  margin-top: -3rem;
+  padding: 0.3rem 0 0.5rem;
   position: relative;
   z-index: 5;
 }
