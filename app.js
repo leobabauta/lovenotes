@@ -20,7 +20,8 @@
     "Chloe was once the cutest ballerina at BodyArts school in Guam.",
     "Chloe is a talented art journaler and loves to create art. She's also been journaling since she was a kid.",
     "Chloe's family nickname is \"Coco\" ... and the Pixar film Coco was named after her, probably.",
-    "One of Chloe's dad's most treasured memories of her childhood is reading all the Harry Potter books together \u2014 hours of father-daughter time in a magical world."
+    "One of Chloe's dad's most treasured memories of her childhood is reading all the Harry Potter books together \u2014 hours of father-daughter time in a magical world.",
+    "Chloe's tattoos include a gaosali flower, ginger flower, peony flower, a Thai tattoo, the Greek word sophrosyne, a shell tattoo, and a wave."
   ];
 
   function showRandomFact(el) {
