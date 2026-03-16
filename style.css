@@ -348,6 +348,9 @@ body {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 0 2rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 5;
 }
 .nav-arrow {
   background: #9e2a4a;
