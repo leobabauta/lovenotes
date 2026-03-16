@@ -19,7 +19,8 @@
     "Chloe once convinced her sister Maia, as a prank, that Chloe had a twin sister.",
     "Chloe was once the cutest ballerina at BodyArts school in Guam.",
     "Chloe is a talented art journaler and loves to create art. She's also been journaling since she was a kid.",
-    "Chloe's family nickname is \"Coco\" ... and the Pixar film Coco was named after her, probably."
+    "Chloe's family nickname is \"Coco\" ... and the Pixar film Coco was named after her, probably.",
+    "One of Chloe's dad's most treasured memories of her childhood is reading all the Harry Potter books together \u2014 hours of father-daughter time in a magical world."
   ];
 
   function showRandomFact(el) {
